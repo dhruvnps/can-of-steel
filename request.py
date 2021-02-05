@@ -34,4 +34,4 @@ c.retrieve(
         ],
         'format': 'netcdf',
     },
-    'dataset.nc')
+    'data.nc')
