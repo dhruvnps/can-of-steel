@@ -4,7 +4,12 @@ from matplotlib.widgets import Slider
 import matplotlib.pyplot as plt
 
 time = 0
-latitude, longitude = (0, 0)
+
+# latitude index [0,4]
+lat_idx = 0
+
+# longitude index [0,9]
+lng_idx = 0
 
 variables = Dataset().variables
 for var in variables:
@@ -14,7 +19,7 @@ for var in variables:
         ds = Dataset(var)
 
         data = [
-            ds.data[time][idx][latitude][longitude]
+            ds.data[time][idx][lat_idx][lng_idx]
             for idx, _ in enumerate(ds.levels)
         ]
 
