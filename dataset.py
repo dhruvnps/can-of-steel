@@ -13,7 +13,7 @@ class Dataset:
     variables = []
 
     def __init__(self, var=None):
-        ds = nc.Dataset('data.nc')
+        ds = nc.Dataset('download.nc')
 
         if var is not None:
             self.data = ds[var][:]
