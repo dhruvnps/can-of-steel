@@ -8,14 +8,20 @@ class Dataset:
     times = []
 
     vmin = None
-    vmax = None
+    vmin = None
 
-    def __init__(self, var):
+    variables = []
+
+    def __init__(self, var=None):
         ds = nc.Dataset('data.nc')
 
-        self.data = ds[var][:]
-        self.vmin = np.min(ds[var][:])
-        self.vmax = np.max(ds[var][:])
+        if var is not None:
+            self.data = ds[var][:]
 
-        self.levels = ds['level'][:]
-        self.times = ds['time'][:]
+            self.levels = ds['level'][:]
+            self.times = ds['time'][:]
+
+            self.vmin = np.min(ds[var][:])
+            self.vmax = np.max(ds[var][:])
+
+        self.variables = ds.variables

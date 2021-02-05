@@ -1,5 +1,4 @@
 from dataset import Dataset
-import numpy as np
 import matplotlib
 from matplotlib.widgets import Slider
 import matplotlib.pyplot as plt
@@ -18,7 +17,7 @@ def update(val):
     for coll in c.collections:
         coll.remove()
     c = ax.contourf(
-        ds[int(time.val)][int(level.val)],
+        ds.data[int(time.val)][int(level.val)],
         vmin=ds.vmin,
         vmax=ds.vmax,
     )
