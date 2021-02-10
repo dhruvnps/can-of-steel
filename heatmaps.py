@@ -18,6 +18,7 @@ for var in variables:
         vmax = np.max(ds.data[time])
 
         fig, ax = plt.subplots()
+        fig.suptitle('London - ' + var)
 
         # plt.subplots_adjust(left=.1, right=.9, bottom=.3, top=.9)
         plt.subplots_adjust(left=.1, right=.9, bottom=.2, top=.9)
