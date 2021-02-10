@@ -31,4 +31,4 @@ for var in variables:
         ax.set_xlabel('altitude / m')
         ax.set_ylabel('conc / µg/m3')
 
-        plt.savefig('figures/' + var)
+        plt.savefig('figures/plots/' + var)
