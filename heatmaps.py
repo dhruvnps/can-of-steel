@@ -44,10 +44,10 @@ for var in variables:
             frames=np.arange(0, len(ds.levels)), interval=500
         )
 
-        Writer = animation.writers['ffmpeg']
-        writer = Writer(fps=2, metadata=dict(artist='dhruvnps'), bitrate=1800)
-
-        anim.save('figures/heatmaps/' + var + '.mp4', writer=writer)
+        #Writer = animation.writers['ffmpeg']
+        #writer = Writer(fps=2, metadata=dict(artist='dhruvnps'), bitrate=1800)
+        writer = animation.PillowWriter(fps=2)
+        anim.save('figures/heatmaps/' + var + '.gif', writer=writer)
 
 
 # def update(val):
