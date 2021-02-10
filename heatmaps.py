@@ -6,6 +6,7 @@ import matplotlib.animation as animation
 import numpy as np
 
 time = 0
+fps = 1.5
 
 variables = Dataset().variables
 for var in variables:
@@ -46,8 +47,8 @@ for var in variables:
         )
 
         #Writer = animation.writers['ffmpeg']
-        #writer = Writer(fps=2, metadata=dict(artist='dhruvnps'), bitrate=1800)
-        writer = animation.PillowWriter(fps=2)
+        #writer = Writer(fps=fps, metadata=dict(artist='dhruvnps'), bitrate=1800)
+        writer = animation.PillowWriter(fps=fps)
         anim.save('figures/heatmaps/' + var + '.gif', writer=writer)
 
 
