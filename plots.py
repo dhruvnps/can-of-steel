@@ -3,23 +3,23 @@ import matplotlib
 from matplotlib.widgets import Slider
 import matplotlib.pyplot as plt
 
-time = 0
+TIME = 0
 
 # latitude index [0,4]
-lat_idx = 0
+LAT_idx = 0
 
 # longitude index [0,9]
-lng_idx = 0
+LNG_idx = 0
 
 variables = Dataset().variables
 for var in variables:
     if variables[var].dimensions == ('time', 'level', 'latitude', 'longitude'):
 
-        print(var)
+        print('=>', var + '.png')
         ds = Dataset(var)
 
         data = [
-            ds.data[time][idx][lat_idx][lng_idx]
+            ds.data[TIME][idx][LAT_idx][LNG_idx]
             for idx, _ in enumerate(ds.levels)
         ]
 

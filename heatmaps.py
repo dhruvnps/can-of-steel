@@ -5,18 +5,21 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import numpy as np
 
-time = 0
-fps = 1.5
+TIME = 0
+FPS = 1.5
+MP4 = False  # if true .mpf else .gif
 
 variables = Dataset().variables
 for var in variables:
     if variables[var].dimensions == ('time', 'level', 'latitude', 'longitude'):
 
-        print(var)
+        filetype = '.mp4' if MP4 else '.gif'
+
+        print('=>', var + filetype)
         ds = Dataset(var)
 
-        vmin = np.min(ds.data[time])
-        vmax = np.max(ds.data[time])
+        vmin = np.min(ds.data[TIME])
+        vmax = np.max(ds.data[TIME])
 
         fig, ax = plt.subplots()
         fig.suptitle('London - ' + var)
@@ -27,7 +30,7 @@ for var in variables:
         ax.set_xlabel('latitude')
         ax.set_ylabel('longitude')
 
-        c = ax.contourf(ds.data[time][0], vmin=vmin, vmax=vmax)
+        c = ax.contourf(ds.data[TIME][0], vmin=vmin, vmax=vmax)
 
         def update(i):
             label = 'Altitude = {:.0f}m'.format(ds.levels[i])
@@ -46,10 +49,14 @@ for var in variables:
             frames=np.arange(0, len(ds.levels)), interval=500
         )
 
-        #Writer = animation.writers['ffmpeg']
-        #writer = Writer(fps=fps, metadata=dict(artist='dhruvnps'), bitrate=1800)
-        writer = animation.PillowWriter(fps=fps)
-        anim.save('figures/heatmaps/' + var + '.gif', writer=writer)
+        if MP4:
+            Writer = animation.writers['ffmpeg']
+            writer = Writer(fps=FPS, metadata=dict(
+                artist='dhruvnps'), bitrate=1800)
+        else:
+            writer = animation.PillowWriter(fps=FPS)
+
+        anim.save('figures/heatmaps/' + var + filetype, writer=writer)
 
 
 # def update(val):
