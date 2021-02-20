@@ -3,15 +3,6 @@ import numpy as np
 
 
 class Dataset:
-    data = []
-    levels = []
-    times = []
-
-    vmin = None
-    vmin = None
-
-    variables = []
-
     def __init__(self, var=None):
         ds = nc.Dataset('download.nc')
 
