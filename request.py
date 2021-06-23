@@ -7,7 +7,7 @@ c.retrieve(
     {
         'variable': [
             'carbon_monoxide', 'dust', 'nitrogen_dioxide',
-            'sulphur_dioxide',
+            'sulphur_dioxide', 'ozone'
         ],
         'model': 'ensemble',
         'level': [
