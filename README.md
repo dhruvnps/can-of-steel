@@ -1,5 +1,5 @@
 ## Can of Steel
-Atmospheric Data Analysis
+Atmospheric Data Analysis for **CanSat**
 
 ### Launch
 > Can launched on **23 Jun 2021**:  
