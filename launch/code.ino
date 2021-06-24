@@ -22,11 +22,21 @@ File myFile;
 // true if cansat is reading data
 bool reading;
 
-// datapoints being measured
+// datapoints being measured:
+
+// Temperature
 String Temp;
+
+// Pressure
 String Pres;
+
+// Ammonia (NH3)
 String NH3;
+
+// Carbon Monoxide (CO)
 String CO;
+
+// Nitrogen Dioxide (NO2)
 String NO2;
 
 // line of comma separated datapoints
