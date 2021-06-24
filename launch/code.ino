@@ -133,8 +133,32 @@ void loop()
     // read and store analog 1 for NH3
     NO2 = String(analogRead(A2));
 
-    // comma separated line of datapoints
-    line = String(millis()) + "," + Pres + "," + Temp + "," + NH3 + "," + CO + "," + NO2;
+    // comma separated line of datapoints:
+
+    line = "";
+
+    // time since power on in milliseconds
+    line += String(millis());
+    line += ",";
+
+    // Pressure in Pascals
+    line += Pres;
+    line += ",";
+
+    // Temperature in degerees centigrade
+    line += Temp;
+    line += ",";
+
+    // NH3 as 8 bit voltage reading
+    line += NH3;
+    line += ",";
+
+    // CO as 8 bit voltage reading
+    line += CO;
+    line += ",";
+
+    // NO2 as 8 bit voltage reading
+    line += NO2;
 
     Serial.println(line);
 
