@@ -57,4 +57,4 @@ for var in variables:
                             Line2D([0], [0], color=max_color, lw=4)]
             # ax.legend(custom_lines, ['0 hrs', '12 hrs', '24 hrs'])
 
-        plt.savefig('figures/plots/altitude-500/reciprocal/' + var)
+        plt.savefig('predictions/figures/plots/altitude-500/reciprocal/' + var)

@@ -4,7 +4,7 @@ import numpy as np
 
 class Dataset:
     def __init__(self, var=None):
-        ds = nc.Dataset('download.nc')
+        ds = nc.Dataset('predictions/download.nc')
 
         if var is not None:
             self.data = ds[var][:]

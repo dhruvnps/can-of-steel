@@ -55,4 +55,5 @@ for var in variables:
         else:
             writer = animation.PillowWriter(fps=FPS)
 
-        anim.save('figures/heatmaps/' + var + filetype, writer=writer)
+        anim.save('predictions/figures/heatmaps/' +
+                  var + filetype, writer=writer)
