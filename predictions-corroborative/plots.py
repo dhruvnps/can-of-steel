@@ -45,7 +45,7 @@ for var in variables:
             ]
 
             pct = time / (hours - 1)
-            if(11 < time < 17):
+            if(11 < time < 17 or True):
                 p, = plt.plot(ds.levels, data, color=color(pct))
 
             custom_lines = [Line2D([0], [0], color=min_color, lw=4),
@@ -53,4 +53,4 @@ for var in variables:
                             Line2D([0], [0], color=max_color, lw=4)]
             ax.legend(custom_lines, ['0 hrs', '12 hrs', '24 hrs'])
 
-        plt.savefig('predictions-secret/figures/plots/' + var)
+        plt.savefig('predictions-corroborative/figures/plots/' + var)
