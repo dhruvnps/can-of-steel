@@ -2,10 +2,14 @@
 Atmospheric Data Analysis for **CanSat**
 
 ## Launch
-Can launched on **23 Jun 2021** in **Elvington**:  
-- [Data collected](https://github.com/dhruvnps/can-of-steel/blob/master/launch/DATA1.CSV)
-- [Arduino code](https://github.com/dhruvnps/can-of-steel/blob/master/launch/code/code.ino)
-- [Initial Analysis](https://docs.google.com/spreadsheets/d/1qnYL0lZKsA4zrAf0lBtq8U0Aw-L6t1JpRK9ES_0VTIc/edit?usp=sharing)
+[Arduino code](https://github.com/dhruvnps/can-of-steel/blob/master/launch/code/code.ino)
+
+- **Elvington** - **23 Jun 2021** *rocket*:
+  - [Data collected](https://github.com/dhruvnps/can-of-steel/blob/master/launch/DATA1.CSV)
+  - [Initial Analysis](https://docs.google.com/spreadsheets/d/1qnYL0lZKsA4zrAf0lBtq8U0Aw-L6t1JpRK9ES_0VTIc/edit?usp=sharing)
+
+- **London** - **13 Jun 2021** *balloonsat*:
+  - [Data collected](https://github.com/dhruvnps/can-of-steel/blob/master/launch/DATA2.csv)
 
 ## Predictions
 Predictions using data from **Copernicus Dataset**
